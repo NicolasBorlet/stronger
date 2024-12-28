@@ -5,10 +5,12 @@ import { Platform } from 'react-native';
 import { HapticTab } from '@/components/HapticTab';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import { Colors } from '@/constants/Colors';
+import { TabBar } from '@/components/TabBar';
 
 export default function TabLayout() {
   return (
     <Tabs
+        tabBar={(props) => <TabBar {...props} />}
       screenOptions={{
         tabBarActiveTintColor: Colors.light.tint,
         headerShown: false,
